@@ -30,5 +30,28 @@ $ cd dotfiles
 then use GNU stow to create symlinks
 
 ```
-$ stow .
+$ stow -t ~ <package>
+```
+
+## Tmux plugins
+
+```
+$ git clone https://github.com/tmux-plugins/tpm.git ~/.config/tmux/plugins/tpm
+```
+
+Inside tmux, run Ctrl + b to reload and Ctrl + s + I to install the packages
+
+## Nerd Fonts
+Download from
+https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/Hasklig.zip
+
+Instal with
+
+```
+$ sudo cp Haskling/*.otf /usr/local/share/fonts
+```
+
+Check with
+```
+$ fc-list | grep Hasklug
 ```
