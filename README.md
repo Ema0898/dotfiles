@@ -39,7 +39,7 @@ $ stow -t ~ <package>
 $ git clone https://github.com/tmux-plugins/tpm.git ~/.config/tmux/plugins/tpm
 ```
 
-Inside tmux, run Ctrl + b to reload and Ctrl + s + I to install the packages
+Inside tmux, run Ctrl + s to reload and Ctrl + s + I to install the packages
 
 ## Nerd Fonts
 Download from
