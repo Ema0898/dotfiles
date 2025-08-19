@@ -16,4 +16,5 @@ normal.family = "Hasklug Nerd Font Mono"
 size = 11
 
 [shell]
-program = "tmux"
+program = "/bin/zsh"
+args = ["-l", "-c", "tmux attach || tmux; exec /bin/zsh -l"]
