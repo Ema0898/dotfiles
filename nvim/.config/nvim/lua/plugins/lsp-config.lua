@@ -1,22 +1,25 @@
 return {
 	{
+        -- installs the needed lsp servers
 		"williamboman/mason.nvim",
 		config = function()
 			require("mason").setup()
 		end,
 	},
 	{
+        -- bridge between mason and lspconfig
 		"williamboman/mason-lspconfig.nvim",
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls", "clangd", "ts_ls" },
+				ensure_installed = { "lua_ls", "clangd", "ts_ls", "qmlls" },
 			})
 		end,
 	},
 	{
+        -- Adds the lsp capabilities to neovim
 		"neovim/nvim-lspconfig",
 		config = function()
-			local capabilities = require("cmp_nvim_lsp").default_capabilities()
+			local capabilities = require("cmp_nvim_lsp").default_capabilities() -- add the capabilities to the completion engine
 
 			local lspconfig = require("lspconfig")
 			lspconfig.lua_ls.setup({
@@ -28,24 +31,7 @@ return {
 			lspconfig.ts_ls.setup({
 				capabilities = capabilities,
 			})
-
-			local configs = require("lspconfig.configs")
-
-			-- QML LSP
-			if not configs.qml6_lsp then
-				configs.qml6_lsp = {
-					default_config = {
-						cmd = { "qmlls" },
-						filetypes = { "qml", "qmljs" },
-						root_dir = function(fname)
-							return lspconfig.util.find_git_ancestor(fname)
-						end,
-						settings = {},
-					},
-				}
-			end
-
-			lspconfig.qml6_lsp.setup({
+			lspconfig.qmlls.setup({
 				capabilities = capabilities,
 			})
 
