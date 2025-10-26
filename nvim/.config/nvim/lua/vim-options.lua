@@ -14,4 +14,14 @@ vim.opt.shiftround = true
 vim.opt.expandtab = true
 vim.opt.autoindent = true
 
-vim.api.nvim_set_option("clipboard","unnamed")
+-- Render white spaces
+vim.opt_global.list = true
+vim.opt.listchars = {
+  space = "·",
+  trail = "•",
+  tab   = "→ ",
+  nbsp  = "⍽",
+  lead  = "·",
+}
+
+vim.api.nvim_set_option("clipboard", "unnamed")

@@ -29,6 +29,9 @@ return {
           },
           marks = {
             initial_mode = "normal"
+          },
+          find_files = {
+            find_command = {"rg", "--ignore", "-L", "--hidden", "--files"}
           }
         }
       })
