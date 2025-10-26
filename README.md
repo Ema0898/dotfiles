@@ -18,6 +18,11 @@ sudo dnf install git
 sudo dnf install stow
 ```
 
+### Telescope dependencies
+```
+sudo dnf install ripgrep fd-find
+```
+
 ## Installation
 
 First, check out the doftiles repo in your $HOME directory using git
