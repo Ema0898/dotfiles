@@ -17,6 +17,10 @@ sudo dnf install git
 ```
 sudo dnf install stow
 ```
+### Telescope dependencies
+```
+sudo dnf install ripgrep fd-find
+```
 
 ## Installation
 

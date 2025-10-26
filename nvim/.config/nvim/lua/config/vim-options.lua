@@ -15,6 +15,7 @@ vim.opt.expandtab = true
 vim.opt.autoindent = true
 
 -- Render white spaces
+vim.opt.list = true
 vim.opt_global.list = true
 vim.opt.listchars = {
   space = "·",

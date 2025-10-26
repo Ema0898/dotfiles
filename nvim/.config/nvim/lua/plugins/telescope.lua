@@ -32,6 +32,9 @@ return {
           },
           find_files = {
             find_command = {"rg", "--ignore", "-L", "--hidden", "--files"}
+          },
+          diagnostics = {
+            initial_mode = "normal"
           }
         }
       })
