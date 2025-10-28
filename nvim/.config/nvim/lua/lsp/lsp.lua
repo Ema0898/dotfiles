@@ -5,16 +5,6 @@ vim.api.nvim_create_autocmd("LspAttach", {
         -- Buffer local mappings.
         -- See `:help vim.lsp.*` for documentation on any of the below functions
         local opts = { buffer = ev.buf, silent = true }
-        local client = vim.lsp.get_client_by_id(ev.data.client_id)
-
-        if client and client.name == "clangd" then
-            opts.desc = "Switch between source/header (clangd)"
-            keymap.set("n", "<A-o>", function()
-                if vim.fn.exists(":ClangdSwitchSourceHeader") == 2 then
-                    vim.cmd.ClangdSwitchSourceHeader()
-                end
-            end, opts)
-        end
 
         -- set keybinds
         opts.desc = "Show LSP references"

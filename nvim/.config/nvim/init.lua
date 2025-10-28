@@ -1,4 +1,4 @@
 require("config.keymaps")
-require("config.lsp")
+require("lsp.lsp")
 require("config.vim-options")
 require("config.lazy")

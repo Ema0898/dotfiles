@@ -13,6 +13,7 @@ vim.opt.shiftwidth = 4
 vim.opt.shiftround = true
 vim.opt.expandtab = true
 vim.opt.autoindent = true
+vim.opt.smartindent = true
 
 -- Render white spaces
 vim.opt.list = true
@@ -24,5 +25,9 @@ vim.opt.listchars = {
   nbsp  = "⍽",
   lead  = "·",
 }
+
+-- Enable spell checking
+vim.opt.spelllang = "en_us"
+vim.opt.spell = true
 
 vim.api.nvim_set_option("clipboard", "unnamed")
