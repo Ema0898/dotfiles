@@ -7,6 +7,9 @@ return {
         icons_enabled = true,
         theme = 'auto',
         component_separators = '|',
+      },
+      sections = {
+        lualine_c = {{ 'filename', path = 1}}
       }
     })
   end

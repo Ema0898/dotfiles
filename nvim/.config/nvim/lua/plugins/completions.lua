@@ -1,10 +1,9 @@
 return {
     {
-        -- displays the built-in lsp completions offer by the attached lsp
+        -- displays the built-in lsp completions offered by the attached lsp
         "hrsh7th/cmp-nvim-lsp",
         event = { "BufReadPre", "BufNewFile" },
         dependencies = {
-            { "antosha417/nvim-lsp-file-operations", config = true }, -- rename imports
             { "folke/lazydev.nvim",                  opts = {} }, -- fixes core vim options on lua files
         },
     },
@@ -37,8 +36,7 @@ return {
                 mapping = cmp.mapping.preset.insert({
                     ["<C-k>"] = cmp.mapping(cmp.mapping.select_prev_item(), { "i", "c" }), -- previous suggestion
                     ["<C-j>"] = cmp.mapping(cmp.mapping.select_next_item(), { "i", "c" }), -- next suggestion
-                    ["<C-e>"] = cmp.mapping.abort(),
-                    ["<Tab>"] = cmp.mapping.confirm({ select = true }),
+                    ["<C-y>"] = cmp.mapping.confirm({ select = true }),
                 }),
                 sources = cmp.config.sources({
                     { name = "nvim_lsp" },
