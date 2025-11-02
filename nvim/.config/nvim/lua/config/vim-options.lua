@@ -15,6 +15,9 @@ vim.opt.expandtab = true
 vim.opt.autoindent = true
 vim.opt.smartindent = true
 
+-- Change signcolumn width
+vim.opt.signcolumn = 'auto:4'
+
 -- Render white spaces
 vim.opt.list = true
 vim.opt_global.list = true
