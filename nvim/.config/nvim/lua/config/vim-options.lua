@@ -6,6 +6,7 @@ vim.g.maplocalleader = ' '
 vim.opt.backspace = '2'
 vim.opt.showcmd = true
 vim.opt.laststatus = 2
+vim.opt.number = true
 vim.opt.relativenumber = true
 
 vim.opt.tabstop = 4
@@ -16,7 +17,7 @@ vim.opt.autoindent = true
 vim.opt.smartindent = true
 
 -- Change signcolumn width
-vim.opt.signcolumn = 'auto:4'
+vim.opt.signcolumn = 'yes:2'
 
 -- Render white spaces
 vim.opt.list = true

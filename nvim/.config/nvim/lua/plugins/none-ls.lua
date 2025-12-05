@@ -2,7 +2,6 @@ return {
     {
         -- wraps lint and formatting tools inside a lsp that can be attached to a buffer
         "nvimtools/none-ls.nvim",
-        dependencies = { "nvimtools/none-ls-extras.nvim" },
         config = function()
             local null_ls = require("null-ls")
 
@@ -10,7 +9,6 @@ return {
                 sources = {
                     null_ls.builtins.formatting.stylua,
                     null_ls.builtins.formatting.clang_format,
-                    require("none-ls.diagnostics.cpplint"),
                 },
             })
 
@@ -20,7 +18,7 @@ return {
     {
         "WhoIsSethDaniel/mason-tool-installer.nvim",
         opts = {
-            ensure_installed = { "stylua", "clang-format", "cpplint" },
+            ensure_installed = { "stylua", "clang-format" },
         },
         dependencies = {
             "williamboman/mason.nvim",

@@ -1,4 +1,4 @@
-import = ["~/.config/alacritty/themes/tokyo-night-storm.toml"]
+general.import = ["~/.config/alacritty/themes/tokyo-night-storm.toml"]
 
 [env]
 TERM = "xterm-256color"
@@ -15,6 +15,6 @@ startup_mode = "Maximized"
 normal.family = "Hasklug Nerd Font Mono"
 size = 10
 
-[shell]
-program = "/bin/zsh"
+[terminal.shell]
+program = "/bin/bash"
 args = ["-l", "-c", "tmux attach || tmux; exec /bin/zsh -l"]
