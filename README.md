@@ -19,7 +19,7 @@ sudo dnf install stow
 ```
 ### Telescope dependencies
 ```
-sudo dnf install ripgrep fd-find
+sudo dnf install ripgrep fd-find tree-sitter-cli
 ```
 
 ## Installation
@@ -58,4 +58,8 @@ $ sudo cp Haskling/*.otf /usr/local/share/fonts
 Check with
 ```
 $ fc-list | grep Hasklug
+```
+### Install o Arch
+```
+$ otf-hasklig-nerd
 ```
