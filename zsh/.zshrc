@@ -58,4 +58,4 @@ zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 
 # zoxide
 eval "$(zoxide init --cmd cd zsh)"
-source /usr/share/fzf/shell/key-bindings.zsh
+source /usr/share/fzf/key-bindings.zsh
