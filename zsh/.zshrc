@@ -59,3 +59,15 @@ zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 # zoxide
 eval "$(zoxide init --cmd cd zsh)"
 source /usr/share/fzf/key-bindings.zsh
+
+# Yazi
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	command yazi "$@" --cwd-file="$tmp"
+	IFS= read -r -d '' cwd < "$tmp"
+	[ "$cwd" != "$PWD" ] && [ -d "$cwd" ] && builtin cd -- "$cwd"
+	rm -f -- "$tmp"
+}
+
+# Set nvim as editor
+export EDITOR=nvim

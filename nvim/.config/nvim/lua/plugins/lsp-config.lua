@@ -11,7 +11,7 @@ return {
         "williamboman/mason-lspconfig.nvim",
         config = function()
             require("mason-lspconfig").setup({
-                ensure_installed = { "lua_ls", "clangd", "ts_ls", "qmlls" }, -- enables them automatically
+                ensure_installed = { "lua_ls", "clangd", "ts_ls", "qmlls", "rust_analyzer" }, -- enables them automatically
             })
         end,
     },

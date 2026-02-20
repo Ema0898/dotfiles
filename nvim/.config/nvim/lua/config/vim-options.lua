@@ -34,4 +34,7 @@ vim.opt.listchars = {
 vim.opt.spelllang = "en_us"
 vim.opt.spell = true
 
+-- Enable project-local config files (.nvim.lua, .nvimrc, .exrc)
+vim.o.exrc = true
+
 vim.api.nvim_set_option("clipboard", "unnamed")

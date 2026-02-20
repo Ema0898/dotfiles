@@ -25,6 +25,13 @@ return {
           find_files = {
             find_command = {"rg", "--ignore", "-L", "--hidden", "--files"}
           },
+        },
+        defaults = {
+          mappings = {
+            n = {
+              ['d'] = require('telescope.actions').delete_buffer
+            }
+          }
         }
       })
       require("telescope").load_extension("ui-select")
