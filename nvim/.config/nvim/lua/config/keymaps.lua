@@ -11,6 +11,6 @@ vim.keymap.set("n", "<c-l>", "<cmd:wincmd l<CR>", { silent = true })
 vim.keymap.set("n", "<c-d>", "<c-d>zz", { silent = true })
 vim.keymap.set("n", "<c-u>", "<c-u>zz", { silent = true })
 
--- Move to next or previous tab
-vim.keymap.set("n", "<Tab>", "<cmd>tabnext<CR>", { silent = true })
-vim.keymap.set("n", "<S-Tab>", "<cmd>tabprevious<CR>", { silent = true })
+-- Move to next or previous tab (Tab conflicts with C-I in alacritty. Comment then for now)
+--vim.keymap.set("n", "<Tab>", "<cmd>tabnext<CR>", { silent = true })
+--vim.keymap.set("n", "<S-Tab>", "<cmd>tabprevious<CR>", { silent = true })

@@ -1,0 +1,104 @@
+/* Waybar — Tokyo Night (GTK-safe, no fancy syntax) */
+
+* {
+  border: none;
+  font-family: "Haskling Nerd Font Propo";
+  font-size: 14px;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+}
+
+window#waybar {
+  background-color: rgba(26, 27, 38, 0.55);      /* #1a1b26 */
+  border-bottom: 1px solid rgba(59, 66, 97, 0.65); /* #3b4261 */
+  color: #c0caf5;
+}
+
+tooltip {
+  background-color: rgba(36, 40, 59, 0.95);      /* #24283b */
+  border: 1px solid rgba(59, 66, 97, 0.85);
+  border-radius: 10px;
+  padding: 6px 10px;
+}
+tooltip label {
+  color: #c0caf5;
+}
+
+/* Base module spacing */
+#clock, #network, #pulseaudio, #battery, #workspaces {
+  background: transparent;
+  padding: 0 10px;
+  margin: 0 4px;
+  color: #c0caf5;
+}
+
+/* Right-side segmented dividers */
+#network, #pulseaudio, #battery {
+  border-left: 1px solid rgba(59, 66, 97, 0.55);
+  padding-left: 12px;
+}
+
+#clock {
+  font-weight: 700;
+}
+
+/* Accent colors (text only) */
+#network { color: #7dcfff; }       /* cyan */
+#pulseaudio { color: #bb9af7; }    /* purple */
+#battery { color: #9ece6a; }       /* green */
+
+#network.disconnected,
+#pulseaudio.muted {
+  color: rgba(169, 177, 214, 0.85); /* #a9b1d6 */
+}
+#battery.warning  { color: #e0af68; } /* yellow */
+#battery.critical { color: #f7768e; } /* red/pink */
+
+/* =========================================================
+   Workspaces — default rectangle shape, Tokyo Night colors
+   (NO !important)
+   Put this at the VERY END of style.css
+   ========================================================= */
+
+#workspaces {
+  background-color: transparent;
+  border: none;
+  margin: 0 6px 0 10px;
+  padding: 0;
+  margin-left: 1px;
+}
+
+/* Default-ish rectangles: no pill, no border, no fill */
+#workspaces button {
+  background-color: transparent;
+  background-image: none;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  text-shadow: none;
+
+  padding: 0 8px;
+  margin: 0 2px;
+
+  color: rgba(169, 177, 214, 0.95); /* #a9b1d6 */
+}
+
+/* Optional subtle hover */
+#workspaces button:hover {
+  background-color: rgba(36, 40, 59, 0.35); /* #24283b */
+  color: #c0caf5;
+}
+
+/* Active workspace: default-style top accent line */
+#workspaces button.active {
+  background-color: transparent;
+  color: #c0caf5;
+  border-top: 2px solid rgba(122, 162, 247, 0.95); /* #7aa2f7 */
+}
+
+/* Urgent workspace */
+#workspaces button.urgent {
+  color: #c0caf5;
+  border-top: 2px solid rgba(247, 118, 142, 0.95); /* #f7768e */
+}
