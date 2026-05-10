@@ -27,7 +27,7 @@ sudo dnf install ripgrep fd-find tree-sitter-cli
 First, check out the doftiles repo in your $HOME directory using git
 
 ```
-$ git clone git@github.com:Ema0898/dotfiles.git
+$ git clone --recursive git@github.com:Ema0898/dotfiles.git
 $ cd dotfiles
 ```
 
@@ -38,10 +38,6 @@ $ stow -t ~ <package>
 ```
 
 ## Tmux plugins
-
-```
-$ git clone https://github.com/tmux-plugins/tpm.git ~/.config/tmux/plugins/tpm
-```
 
 Inside tmux, run Ctrl + s to reload and Ctrl + s + I to install the packages
 
@@ -59,7 +55,7 @@ Check with
 ```
 $ fc-list | grep Hasklug
 ```
-### Install o Arch
+### Install on Arch
 ```
 $ otf-hasklig-nerd
 ```
